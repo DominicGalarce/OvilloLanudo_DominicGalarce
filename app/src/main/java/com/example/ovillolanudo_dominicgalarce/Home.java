@@ -18,12 +18,23 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-        videoview = (VideoView) findViewById(R.id.videoView);
+     /*   videoview = (VideoView) findViewById(R.id.videoView);
         Uri uri = Uri.parse("https://www.youtube.com/watch?v=QVSoDMeMRy0");
         videoview.setMediaController(new MediaController(this));
         videoview.setVideoURI(uri);
         videoview.requestFocus();
         videoview.start();
+
+    */
+
+        VideoView videoView = findViewById(R.id.video_View);
+        String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.chayanne;
+        Uri uri = Uri.parse(videoPath);
+        videoView.setVideoURI(uri);
+
+        MediaController mediaController = new MediaController(this);
+        videoView.setMediaController(mediaController);
+        mediaController.setAnchorView(videoView);
     }
 
     public void informacion(View view){

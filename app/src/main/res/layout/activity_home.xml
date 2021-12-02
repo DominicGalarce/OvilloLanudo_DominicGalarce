@@ -35,25 +35,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <VideoView
-                android:id="@+id/videoView"
-                android:layout_width="300dp"
-                android:layout_height="170dp"
-                android:layout_marginTop="164dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="335dp"
                 android:layout_height="125dp"
                 android:text="En esta aplicación puedes aprender a crear piezas tejidas a palillos y crochet a traves de clases particulares, las cuales podrás agendar. además tambien podras ver los insumos disponibles para crear hermosas piezas"
-                app:layout_constraintBottom_toTopOf="@+id/videoView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <VideoView
+                android:id="@+id/video_View"
+                android:layout_width="333dp"
+                android:layout_height="161dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -89,5 +89,6 @@
             android:layout_height="wrap_content"
             android:onClick="informacion"
             android:text="Informacion" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
